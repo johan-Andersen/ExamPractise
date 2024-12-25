@@ -40,9 +40,17 @@ public class User {
 
         Random random = new Random();
 
-        int number = random.nextInt(9999) // + 1000 - this will make a number (4 digits) between 1000 and 9999;
+        int number = random.nextInt(9999); // + 1000 - this will make a number (4 digits) between 1000 and 9999;
+        String numberString = Integer.toString(number);
 
-        String formatted = String.format("%04d", number);
+        while(numberString.length() < 4) {
+            numberString = "0" + numberString;
+        }
+
+       userID = firstName.substring(0, 2).toLowerCase() + lastName.substring(0, 2).toLowerCase() + numberString;
+
+
+//        String formatted = String.format("%04d", number);
 
         /*
         Breaking Down %04d:
@@ -56,9 +64,12 @@ public class User {
             The value must be a whole number (int, long, short, etc.).
          */
 
-        userID = firstName.substring(0, 2) + lastName.substring(0, 2) + formatted;
+//        userID = firstName.substring(0, 2) + lastName.substring(0, 2) + formatted;
     }
 
+    public String printID() {
+        return userID;
+    }
 
 
 

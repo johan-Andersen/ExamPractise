@@ -9,6 +9,10 @@ public class Main {
 
         user.createUserID();
 
+        System.out.println(user.validUserID());
+
+        System.out.println(user.printID());
+
     }
 
 }
