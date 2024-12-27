@@ -1,0 +1,4 @@
+Name: Clara, Duration: 1000.0, Loudness: very loud
+Name: emil, Duration: 1000.0, aspectRatio: annoying
+Name: Clara, Duration: 1000.0, Loudness: very loud
+Name: emil, Duration: 1000.0, aspectRatio: annoying

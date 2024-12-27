@@ -1,0 +1,14 @@
+Exam number: 1, Exam grade: C
+Exam number: 2, Exam grade: B
+Exam number: 3, Exam grade: E
+Exam number: 4, Exam grade: F
+Exam number: 5, Exam grade: B
+Exam number: 6, Exam grade: A
+Exam number: 7, Exam grade: E
+Exam number: 8, Exam grade: A
+Exam number: 9, Exam grade: F
+Exam number: 10, Exam grade: F
+Exam number: 11, Exam grade: E
+Exam number: 12, Exam grade: D
+Exam number: 13, Exam grade: C
+Exam number: 14, Exam grade: E
