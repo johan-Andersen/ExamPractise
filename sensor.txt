@@ -1,0 +1,5 @@
+ID: tomas, Value: 1, Status: OK
+ID: Jakob, Value: 22, Status: ERROR
+ID: Janne, Value: 32, Status: ERROR
+ID: Fatima, Value: 0, Status: WARNING
+ID: Kristi, Value: 92, Status: OK
