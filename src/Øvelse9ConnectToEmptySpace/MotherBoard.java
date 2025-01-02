@@ -1,6 +1,7 @@
 package Øvelse9ConnectToEmptySpace;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MotherBoard {
 
@@ -10,57 +11,73 @@ public class MotherBoard {
     private SataDrive drive4;
 
     public MotherBoard() {
+
         this.drive1 = null;
         this.drive2 = null;
         this.drive3 = null;
         this.drive4 = null;
+
     }
 
-    private ArrayList<SataDrive> getDriveList() {
-        ArrayList<SataDrive> list = new ArrayList<>();
-        list.add(drive1);
-        list.add(drive2);
-        list.add(drive3);
-        list.add(drive4);
+    public StringBuilder connectedSataDrives() {
 
-        return list;
-    }
+//        ArrayList<SataDrive> driveList = new ArrayList<>();
+//
+//        if(drive1 != null) {
+//            driveList.add(drive1);
+//        }
+//        if(drive2 != null) {
+//            driveList.add(drive2);
+//        }
+//        if(drive3 != null) {
+//            driveList.add(drive3);
+//        }
+//        if(drive4 != null) {
+//            driveList.add(drive4);
+//        }
+//
+//        return driveList;
 
-    public void print() {
-        ArrayList<SataDrive> drives = getDriveList();
-
-        for(int i = 0; i < drives.size(); i++) {
-            if(drives.get(i) != null) {
-                System.out.println("Slot " + (i + 1) + ": " + drives.get(i).getName());
-            }
-            else {
-                System.out.println("Slot " + (i + 1) + ": Empty");
-            }
+        StringBuilder stringBuilder = new StringBuilder();
+        if(drive1 != null) {
+            stringBuilder.append(drive1).append("\n");
+        }
+        if(drive2 != null) {
+            stringBuilder.append(drive2).append("\n");
+        }
+        if(drive3 != null) {
+            stringBuilder.append(drive3).append("\n");
+        }
+        if(drive4 != null) {
+            stringBuilder.append(drive4).append("\n");
         }
 
+        if(drive1 == null && drive2 == null && drive3 == null && drive4 == null) {
+            stringBuilder.append("There are no connected SataDrives");
+        }
+
+        return stringBuilder;
+
     }
 
-    public String connectSataDrive(SataDrive drive) {
+    public String connectSataDrive(SataDrive sataDrive) {
 
         if(drive1 == null) {
-            drive1 = drive;
-            return "SataDrive added to slot 1";
+            drive1 = sataDrive;
+            return "SataDrive connected at space 1";
+        } else if(drive2 == null) {
+            drive2 = sataDrive;
+            return "SataDrive connected at space 2";
+        } else if (drive3 == null) {
+            drive3 = sataDrive;
+            return "SataDrive connected at space 3";
+        } else if(drive4 == null) {
+            drive4 = sataDrive;
+            return "SataDrive connected at space 4";
+        } else {
+            return "There are no empty spaces for a new sataDrive";
         }
-        else if (drive2 == null) {
-            drive2  = drive;
-            return "SataDrive added to slot 2";
-        }
-        else if (drive3 == null) {
-            drive3 = drive;
-            return "SataDrive added to slot 3";
-        }
-        else if (drive4 == null) {
-            drive4 = drive;
-            return "SataDrive added to slot 4";
-        }
-        else {
-            return "No available space for new SataDrive";
-        }
+
     }
 
 

@@ -1,24 +1,31 @@
 package ChatØvelse9ArvPolymorfiEnum;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Question> quizList = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
 
-        quizList.add(new MultipleChoiceQuestion("how many sides does a triangle have? 1: 1, 2: 5, 3: 3", 1));
-        quizList.add(new TrueFalseQuestion("Are horses blue?", 1));
-        quizList.add(new ShortAnswerQuestion("who has the biggest podcast worldwide?", 5));
+        ArrayList<Question> list = new ArrayList<>();
 
-        Quiz quiz = new Quiz(quizList);
+        ArrayList<String> multipleChoice = new ArrayList<>();
+        multipleChoice.add("1. Denmark");
+        multipleChoice.add("2. Norway");
+        multipleChoice.add("3. Sweden");
+        list.add(new MultipleChoiceQuestion("Which country has the largest area", 5, multipleChoice, 0));
+        list.add(new TrueFalseQuestion("are dogs mammels?", 1, true));
+        list.add(new ShortAnswerQuestion("What is the german heavy metal band called who made the song 'sonne'?", 2, "ramstein"));
 
-
+        Quiz quiz = new Quiz(list);
 
 
 
 
     }
 
+
 }
+

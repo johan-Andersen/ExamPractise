@@ -8,7 +8,7 @@ public class Names {
 
     public Names(String fullName) {
 
-        String[] name = fullName.split(" ");
+        String[] name = fullName.split("");
         this.firstName = name[0];
         if(name.length > 2) {
             this.middleName = name[1];

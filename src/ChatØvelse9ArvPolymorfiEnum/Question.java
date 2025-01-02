@@ -10,11 +10,18 @@ public abstract class Question {
         this.points = points;
     }
 
+    public int getPoints() {
+        return points;
+    }
+
     public String getText() {
         return text;
     }
 
-    public int getPoints() {
-        return points;
+    @Override
+    public String toString() {
+        return "Question: " + text + ", Points: " + points;
     }
+
+
 }

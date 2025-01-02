@@ -4,13 +4,15 @@ public class TrueFalseQuestion extends Question {
 
     private boolean answer;
 
-
-    public TrueFalseQuestion(String text, int points) {
+    public TrueFalseQuestion(String text, int points, boolean answer) {
         super(text, points);
-        this.answer = false;
+        this.answer = answer;
+
     }
 
-    public void setAnswer(boolean answer) {
-        this.answer = answer;
+    @Override
+    public String toString() {
+        return super.toString() + ", Choice: " + answer;
     }
+
 }
